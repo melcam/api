@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: api
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/secureapi
+    password: admin
+    username: root
+  jpa:
+    properties:
+      hibernate:
+        globally_quoted_indentifiers: true
+        dialect: org.hibernate.dialect.MySQL8Dialect
+        format_sql: true
+    generate-ddl: true
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.MySQL8InnoDBDialect
+  #manejan los scripts de inicialización
+  sql:
+    init:
+      mode: never
+
+
